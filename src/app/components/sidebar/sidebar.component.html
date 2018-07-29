@@ -1,0 +1,27 @@
+<button style="float: middle;" class="btn btn-outline-secondary" (click)="randomize()">Click to Play</button>
+<div class="row">
+  <div style="display: block;">
+    <canvas baseChart width="400" height="400" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+      [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+
+  <div class="col-md-12" style="margin-bottom: 10px">
+    <table class="table table-responsive table-condensed">
+      <tr>
+        <th *ngFor="let label of lineChartLabels">{{label}}</th>
+      </tr>
+      <tr *ngFor="let d of lineChartData">
+        <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-6" float="left">
+    <button routerLink="/client/add" class="btn btn-success btn-block">
+      <i class="fa fa-plus"></i> New Client
+    </button>
+  </div>
+</div> -->

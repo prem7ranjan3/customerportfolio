@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-6">
+      <a href="#" routerLink="/" class="btn btn-link">
+      <i class="fa fa-arrow-circle-o-left"></i> Back To Dashboard
+      </a>
+    </div>
+    <div class="col-md-6">
+      
+      </div>
+</div>
+
+<h4>{{ title }} </h4>
+<div class="row">
+    <div class="col-md-6">
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+</div>
+<div class="col-md-6">
+<p class="clearfix visible-xs-block" >Please fill out the quick details and we will be in touch with lighting speed.</p>
+<div class="card card-body">
+    <form action="#" class="form-horizontal ws-validate">
+        <div class="form-group">
+            <label for="name" class="">Name*</label>
+            <input type="name" class="form-control" id="name" placeholder="Name" required />
+                
+            <label for="email" class="">Email*</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" required />
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+    </form>
+  </div>
+  </div>
+</div>
