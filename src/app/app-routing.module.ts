@@ -17,7 +17,7 @@ import { RegisterGuard } from './guards/register.guard';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate:[AuthGuard]},
-  { path: 'login', component: LoginComponent, canActivate:[RegisterGuard] },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'client/add', component: AddClientComponent, canActivate:[AuthGuard] },
   { path: 'client/edit/:id', component: EditClientComponent, canActivate:[AuthGuard] },
